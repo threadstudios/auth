@@ -1,9 +1,6 @@
 require("dotenv").config();
 const { sql } = require("@threadws/puresql");
-require("../src/config")({
-  verificationEmailTemplate: `${__dirname}/../__fixtures__/verificationTemplate.njk`,
-  verificationExpiry: 2
-});
+require("../src/config")(require("../__fixtures__/config"));
 const register = require("../src/actions/register");
 
 test("It throws if provided insuffecient information", async done => {

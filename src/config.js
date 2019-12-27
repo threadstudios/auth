@@ -1,15 +1,31 @@
 const { AppException } = require("@threadws/exceptions");
+const { isValid } = require("@threadws/validator");
 
 class Config {
   constructor(params) {
-    const required = ["verificationEmailTemplate", "verificationExpiry"].filter(
-      req => {
-        return !params[req];
+    const valid = [
+      isValid(
+        {
+          emailTemplate: "isRequired",
+          expiration: "isRequired"
+        },
+        params.verification
+      ),
+      isValid(
+        {
+          issuer: "isRequired"
+        },
+        params.jwt
+      )
+    ].reduce((acc, validity) => {
+      if (!validity.isValid) {
+        acc.push(...Object.keys(validity.errorFields));
       }
-    );
-    if (required.length) {
+      return acc;
+    }, []);
+    if (valid.length) {
       throw new AppException({
-        message: `Missing ${required.join(", ")} configuration for auth`
+        message: `Missing ${valid.join(", ")} configuration for auth`
       });
     }
     this.settings = { ...params };

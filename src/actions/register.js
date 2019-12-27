@@ -43,7 +43,7 @@ module.exports = async userDetails => {
       userId: user.id,
       email: user.email,
       token: v4(),
-      expiry: toMySQL(addDays(new Date(), config.verificationExpiry))
+      expiry: toMySQL(addDays(new Date(), config.verification.expiration))
     }),
     ({ insertId }) => sql.getFirst(qAuth.getVerificationById, { id: insertId })
   );

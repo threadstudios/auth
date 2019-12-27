@@ -8,5 +8,5 @@ module.exports.sendVerification = params =>
     text: params.text,
     from: config.emailFrom,
     subject: config.verificationEmailSubject,
-    template: config.verificationEmailTemplate
+    template: config.verification.emailTemplate
   });
