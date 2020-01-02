@@ -1,7 +1,7 @@
 require("dotenv").config();
 const config = require("../src/config")(require("../__fixtures__/config"));
-const generateToken = require("../src/actions/generateToken");
-const verifyToken = require("../src/actions/verifyToken");
+const generateToken = require("../src/actions/generateJWT");
+const verifyToken = require("../src/actions/verifyJWT");
 
 test("Generates a valid JWT", () => {
   const jwt = generateToken("TEST_USER_ID");

@@ -31,3 +31,25 @@ WHERE id = :id
 UPDATE user
 SET state = 'verified'
 WHERE id = :id
+
+-- name: registerLogin
+INSERT INTO user__login (userId, success)
+VALUES (:userId, :success)
+
+-- name: createPasswordResetToken
+INSERT INTO user__resets (userId, token, expiry, success)
+VALUES (:userId, :token, :expiry, 0)
+
+-- name: setPasswordResetComplete
+UPDATE user__resets
+SET success = 1
+WHERE token = :token
+
+-- name: getPasswordResetByToken
+SELECT * from user__resets
+WHERE token = :token
+
+-- name: setNewUserPassword
+UPDATE user
+SET password = :password
+WHERE id = :id

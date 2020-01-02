@@ -301,10 +301,10 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@threadws/date@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@threadws/date/-/date-0.1.1.tgz#43f9e890ff8878e9f8166fd379f608e588501899"
-  integrity sha512-mYPcSfHmO9Oj2glX71lUS5ado7WuH6bAZEQMdBmqLKKat8RlxYhF30SA/FSf6Qy4nymv3gi1dxSWHcMJzJHGMw==
+"@threadws/date@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@threadws/date/-/date-0.1.2.tgz#15e1d25f760f85072e829c677741235787b87120"
+  integrity sha512-g9+F0ujTILKVFM7FwvGJd5p1VvTYDRDgzvPEXxcRsXhiWxKlDMYpWcSQahRy2GVd7IB+9+3tS86agaJo2zjXZA==
   dependencies:
     date-fns "^2.8.1"
 
@@ -323,10 +323,10 @@
     eslint-plugin-react-hooks "^1.7.0"
     prettier "^1.18.2"
 
-"@threadws/exceptions@0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@threadws/exceptions/-/exceptions-0.1.4.tgz#96a01a0cf8db43081607df5f81c1e16df4597a25"
-  integrity sha512-IJF6dGli/AHc12Yv38fO5QQaW8ugSga5fa7f7V097hinoBtNzo+y5tUjNoAY1466JUzaoWH+Cif5G9xSerpq7A==
+"@threadws/exceptions@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@threadws/exceptions/-/exceptions-0.1.5.tgz#4c83d293b37310f9046a6cdb4c68c2a05fdc773b"
+  integrity sha512-5hN+qWK8UIWHJ2rGWvUGgjJi31fCtBUjXJPBBH2SQR5RTVnMeKgzPlpi9LzFCtzNP5ZSBpya9K/FmzXZwwWqYA==
   dependencies:
     "@threadws/logger" "^0.1.6"
 
@@ -337,19 +337,19 @@
   dependencies:
     winston "^3.2.1"
 
-"@threadws/mailer@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@threadws/mailer/-/mailer-0.1.2.tgz#95d8027ed8b5c4dcf2f6e297e549aaf1d075c63d"
-  integrity sha512-w6KCmXRxHAXcMIlrHTcmrOwdKa2BXl37HZ+LTYxZx+JTQoQC/vXOtccw83YvyXpKMWjWRovWqwi+n3ro8Kd74w==
+"@threadws/mailer@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@threadws/mailer/-/mailer-0.1.3.tgz#1bd9402e342a66c400fd8eef0a773f7d6769d664"
+  integrity sha512-7tBz6yAmuMIzMKu6q1gVoYdpOiDsdHsUKqHU4CZTeV8tzF9fpwYEBACKebojXbGahhkGLVKVb+Jv7uWFUy2Rvw==
   dependencies:
     mailgun-js "^0.22.0"
     nodemailer "^6.4.1"
     nunjucks "^3.2.0"
 
-"@threadws/migrations@0.1.7":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/@threadws/migrations/-/migrations-0.1.7.tgz#d3de6df653a9048b584c6b9dae0ebae15eb11780"
-  integrity sha512-rjq6hsw7/M9rKjoZBqOnWAayiKxxoJd1cm4ckXYohJ5AmPUfmMmXlQ9V1w/PjFGiffp5xe5THifc2mBEL9Y98Q==
+"@threadws/migrations@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@threadws/migrations/-/migrations-0.1.8.tgz#3a0dd79dd86b68f10c95308a2f9f1fb528f19c3a"
+  integrity sha512-dCaUq1Rfz9be8nM57n5pCaM6btWIw33tHc89fkxfx5uo/7l7aHFuVlgrCK2q2dPH9f/on6+UBrKbcpPQvVAEDw==
   dependencies:
     "@threadws/eslint-config-thread" "^1.0.0"
     "@threadws/logger" "^0.1.6"
@@ -571,9 +571,9 @@ ansi-styles@^3.2.0, ansi-styles@^3.2.1:
     color-convert "^1.9.0"
 
 ansi-styles@^4.1.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-4.2.0.tgz#5681f0dcf7ae5880a7841d8831c4724ed9cc0172"
-  integrity sha512-7kFQgnEaMdRtwf6uSfUnVr9gSGC7faurn+J/Mv90/W+iTtN0405/nLdopfMWwchyxhbGYl6TC4Sccn9TUkGAgg==
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-4.2.1.tgz#90ae75c424d008d2624c5bf29ead3177ebfcf359"
+  integrity sha512-9VGjrMsG1vePxcSweQsN20KY/c4zN0h9fLjqAbwbPfahM3t+NL+M9HC8xeXG2I8pX5NoamTGNuomEUFI7fcUjA==
   dependencies:
     "@types/color-name" "^1.1.1"
     color-convert "^2.0.1"

@@ -1,7 +1,7 @@
 require("dotenv").config();
 const { sql, q } = require("@threadws/puresql");
 const { toMySQL, addDays, subDays } = require("@threadws/date");
-const verify = require("../src/actions/verify");
+const verify = require("../src/actions/verifyUser");
 
 const qAuth = q.authUser;
 const openToken = "OPEN_TOKEN_TEST";
@@ -47,8 +47,6 @@ test("Should throw if the verification token is expired", async done => {
     expect(e.name).toBe("VerifyTokenExpiredError");
     done();
   }
-
-  done();
 });
 
 afterAll(() => {

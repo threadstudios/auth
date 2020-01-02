@@ -9,7 +9,7 @@ test("It throws if provided insuffecient information", async done => {
     password: "thecakeisalie"
   };
   try {
-    const registerResult = await register(userDetails);
+    await register(userDetails);
   } catch (e) {
     expect(e.statusCode).toBe(422);
     expect(e.name).toBe("RegistrationValidationError");
@@ -29,6 +29,21 @@ test("It will create a user if the validation passes", async done => {
   expect(registerResult.id).toBeDefined();
   expect(registerResult.firstName).toBe(userDetails.firstName);
   done();
+});
+
+test("It throws if the user already exists", async done => {
+  try {
+    const userDetails = {
+      email: "paul@westerdale.me",
+      password: "thecakeisalie",
+      firstName: "Paul",
+      lastName: "Westerdale"
+    };
+    await register(userDetails);
+  } catch (e) {
+    expect(e.name).toBe("RegistrationUserExistsError");
+    done();
+  }
 });
 
 afterAll(() => {
