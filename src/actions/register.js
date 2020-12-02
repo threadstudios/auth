@@ -6,6 +6,7 @@ const v4 = require("uuid/v4");
 const newUserModel = require("../model/newUser");
 const { sendVerification } = require("../email");
 const config = require("../config")();
+const userSanitizer = require("../sanitizer/user");
 const {
   RegistrationValidationError,
   RegistrationUserExistsError
@@ -22,7 +23,7 @@ module.exports = async userDetails => {
     email: userDetails.email
   });
   if (userExists) {
-    throw new RegistrationUserExistsError(userExists);
+    throw new RegistrationUserExistsError(userSanitizer(userExists));
   }
   const password = await bcrypt.hash(
     userDetails.password,
