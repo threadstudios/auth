@@ -3,7 +3,7 @@
     "@threadws/date": "^0.1.2",
     "@threadws/exceptions": "^0.1.5",
     "@threadws/logger": "^0.1.6",
-    "@threadws/mailer": "^0.1.3",
+    "@threadws/mailer": "^0.1.5",
     "@threadws/puresql": "^0.1.1",
     "@threadws/validator": "1.1.3",
     "bcrypt": "^3.0.7",
